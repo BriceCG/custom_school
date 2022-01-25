@@ -1,0 +1,21 @@
+{
+    'name': 'Student Management',
+    'version': '15.0.0.',
+    'summary': '',
+    'description': '',
+    'category': '',
+    'author': '',
+    'website': '',
+    'license': '',
+    'depends': ['base', ],
+    'data': [
+        'report/student_report.xml',
+        'security/ir.model.access.csv',
+        'views/student_views.xml',
+        'views/student_company.xml',
+        'views/student_school.xml',
+        'views/student_faculty.xml',
+],
+    'installable': True,
+    'auto_install': False,
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="view_school_form" model="ir.ui.view">
+            <field name="name">view.school.form</field>
+            <field name="model">student.school</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <field name="logo" widget="image" class="oe_avatar" />
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="email" />
+                                <field name="phone" />
+                            </group>
+                            <group>
+                                <field name="website" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_school_tree" model="ir.ui.view">
+            <field name="name">view.school.tree</field>
+            <field name="model">student.school</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="phone" />
+                    <field name="email" />
+                    <field name="website" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_school_view" model="ir.actions.act_window">
+            <field name="name">School</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student.school</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+
+              </p><p>
+
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="school_menu"
+                name="School"
+                parent="school_main_menu"
+                action="action_school_view"
+        />
+    </data>
+</odoo>

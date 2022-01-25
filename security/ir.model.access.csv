@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+student_access,student_access,model_school_student,,1,1,1,1
+experience_access,experience_access,model_student_experience,,1,1,1,1
+company_access,company_access,model_student_company,,1,1,1,1
+school_access,school_access,model_student_school,,1,1,1,1
+faculty_access,faculty_access,model_student_faculty,,1,1,1,1
