@@ -7,3 +7,5 @@ school_access,school_access,model_student_school,,1,1,1,1
 faculty_access,faculty_access,model_student_faculty,,1,1,1,1
 skill_access,skill_access,model_skill,,1,1,1,1
 student_skill_access,student_skill_access,model_student_skill,,1,1,1,1
+student_skill_history_access,student_skill_history_access,model_student_skill_history,,1,1,1,1
+wizard_update_skill_access,wizard_update_skill_access,model_wizard_update_skill,,1,1,1,1

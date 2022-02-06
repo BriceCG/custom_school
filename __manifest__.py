@@ -16,6 +16,8 @@
         'views/student_school.xml',
         'views/student_faculty.xml',
         'views/analysis.xml',
+        'wizards/wizard_update_skill.xml',
+        'wizards/wizard_history_skill.xml',
 ],
     'installable': True,
     'auto_install': False,

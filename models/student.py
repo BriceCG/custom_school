@@ -48,6 +48,7 @@ class StudentExperience(models.Model):
 class StudentSkillLine(models.Model):
     _name = 'student.skill'
 
+    date = fields.Date(string="Last Update", default=fields.Date.today())
     student_id = fields.Many2one('school.student')
     skill_id = fields.Many2one('skill', string="Skill")
     school_id = fields.Many2one('student.school', related='student_id.school_id', store=True)
@@ -78,6 +79,17 @@ class StudentSkillLine(models.Model):
         for rec in self:
             if rec.rate_number > 10:
                 raise ValidationError('The rate cannot be superior to 10')
+
+    def update_rate(self):
+        action = self.env.ref('custom_school.action_wizard_update_skill_view').read()[0]
+        action['target'] = 'new'
+        return action
+
+    def view_history(self):
+        action = self.env.ref('custom_school.action_wizard_skill_history_view').read()[0]
+        action['domain'] = [('skill_id', '=', self.skill_id.id), ('student_id', '=', self.student_id.id)]
+        action['target'] = 'new'
+        return action
 
 
 class ReportStudent(models.AbstractModel):

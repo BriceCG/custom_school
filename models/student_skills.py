@@ -6,4 +6,10 @@ class Skill(models.Model):
 
     name = fields.Char(string="Name")
 
-    
+
+class StudentSkillHistory(models.Model):
+    _name = 'student.skill.history'
+    _inherit = 'student.skill'
+
+    comment = fields.Text(string="Comment")
+
