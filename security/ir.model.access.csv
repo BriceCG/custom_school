@@ -5,3 +5,5 @@ experience_access,experience_access,model_student_experience,,1,1,1,1
 company_access,company_access,model_student_company,,1,1,1,1
 school_access,school_access,model_student_school,,1,1,1,1
 faculty_access,faculty_access,model_student_faculty,,1,1,1,1
+skill_access,skill_access,model_skill,,1,1,1,1
+student_skill_access,student_skill_access,model_student_skill,,1,1,1,1

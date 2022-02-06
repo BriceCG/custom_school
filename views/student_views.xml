@@ -24,6 +24,7 @@
                                 <field name="date_of_birth" />
                                 <field name="age" />
                                 <field name="school_id" />
+                                <field name="faculty_id" />
                             </group>
                             <group>
                                 <field name="phone" />
@@ -34,16 +35,29 @@
                         <notebook>
                             <page string="Experience">
                                 <field name="experience_ids">
-                                    <tree editable="bootom">
+                                    <tree editable="bottom">
                                         <field name="date_from"  />
                                         <field name="date_to" />
                                         <field name="duration" />
                                         <field name="student_company_id" />
                                     </tree>
-                            </field>
+                                </field>
                             </page>
-
+                            <page string="Skills">
+                                <field name="skill_ids">
+                                    <tree editable="bottom">
+                                        <field name="skill_id" />
+                                        <field name="rate_number" />
+                                        <field name="rating" widget="priority"  />
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
+                         <div class="oe_chatter">
+                            <field name="message_follower_ids" />
+                            <field name="activity_ids" />
+                            <field name="message_ids" />
+                         </div>
                     </sheet>
                 </form>
             </field>

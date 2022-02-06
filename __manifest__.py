@@ -7,7 +7,7 @@
     'author': '',
     'website': '',
     'license': '',
-    'depends': ['base', ],
+    'depends': ['base', 'mail'],
     'data': [
         'report/student_report.xml',
         'security/ir.model.access.csv',
@@ -15,6 +15,7 @@
         'views/student_company.xml',
         'views/student_school.xml',
         'views/student_faculty.xml',
+        'views/analysis.xml',
 ],
     'installable': True,
     'auto_install': False,
